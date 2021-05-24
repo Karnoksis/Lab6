@@ -1,4 +1,6 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
+language: csharp
+mono: none
+dotnet: 2.1.502
+script:
+ - dotnet restore
+...
