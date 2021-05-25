@@ -1,2 +1,11 @@
 language: csharp
-solution: code.cs
+
+addons:
+  sonarcloud:
+    organization: "karnoksis"
+    token:
+      secure: "Sonar" # encrypted value of your token
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - sonar-scanner
